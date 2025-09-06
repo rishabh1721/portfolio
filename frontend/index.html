@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Rishabh Kumar — MCA GenAI Student | AI & Full-Stack Developer 2025</title>
+  <meta name="description" content="Rishabh Kumar - MCA GenAI student at SRM KTR, mastering C++ DSA, MERN stack, Python AI/ML. Building towards GSoC 2026 and impactful full-stack development.">
+  <meta name="keywords" content="Rishabh Kumar, MCA GenAI, SRM KTR, C++ DSA, MERN Stack, Python AI/ML, GSoC 2026, Full Stack Developer, Chennai, R CODES">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Rishabh Kumar - MCA GenAI Student & AI Developer">
+  <meta property="og:description" content="Building intelligent solutions with C++ DSA, MERN stack, and Python AI/ML at SRM KTR">
+  <meta property="og:image" content="RISHU.png">
+  <meta property="og:url" content="https://rishabhkumar.dev">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="R CODES - Rishabh Kumar Portfolio">
+  <meta name="twitter:description" content="MCA GenAI student building the future with code">
+  
+  <!-- Performance & SEO -->
+  <meta name="theme-color" content="#f97316">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Rishabh Kumar">
+  <link rel="canonical" href="https://rishabhkumar.dev">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+  
+  <!-- Fonts - Optimized Loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Responsive Design CSS -->
+  <style>
+    /* Critical CSS for instant responsive render */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0a0a0f;
+      color: #ffffff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    
+    /* Responsive Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    @media (min-width: 640px) {
+      .container { padding: 0 2rem; }
+    }
+    
+    @media (min-width: 1024px) {
+      .container { padding: 0 3rem; }
+    }
+    
+    @media (min-width: 1280px) {
+      .container { padding: 0 4rem; }
+    }
+    
+    /* Loading Screen */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, #0a0a0f, #1a1a1f);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      gap: 2rem;
+    }
+    
+    .loading-logo {
+      font-size: clamp(2rem, 8vw, 4rem);
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 0.2em;
+      text-align: center;
+    }
+    
+    .text-accent { color: #f97316; }
+    
+    .loading-text {
+      color: #888;
+      font-size: clamp(0.75rem, 2vw, 0.9rem);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    
+    .loading-progress {
+      width: min(300px, 80vw);
+      height: 4px;
+      background: #333;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    
+    .loading-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #f97316, #fb923c);
+      border-radius: 2px;
+      animation: loadProgress 2s ease-out forwards;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    
+    @keyframes loadProgress {
+      to { transform: scaleX(1); }
+    }
+    
+    .loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s ease;
+    }
+    
+    /* Responsive Text Scaling */
+    .hero-title {
+      font-size: clamp(2rem, 6vw, 4rem) !important;
+      line-height: 1.1 !important;
+    }
+    
+    .hero-description {
+      font-size: clamp(1rem, 2.5vw, 1.125rem) !important;
+    }
+    
+    .section-title {
+      font-size: clamp(1.875rem, 5vw, 2.5rem) !important;
+    }
+    
+    /* Mobile-First Responsive Grid */
+    .hero-content {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 2rem !important;
+    }
+    
+    @media (min-width: 1024px) {
+      .hero-content {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 4rem !important;
+      }
+    }
+    
+    /* Responsive Navigation */
+    .site-header {
+      padding: 1rem 0 !important;
+    }
+    
+    @media (min-width: 768px) {
+      .site-header {
+        padding: 1.5rem 0 !important;
+      }
+    }
+    
+    /* Responsive Project Grid */
+    .projects-grid {
+      display: grid !important;
+      gap: 1.5rem !important;
+      grid-template-columns: 1fr !important;
+    }
+    
+    @media (min-width: 640px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .projects-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+    
+    /* Responsive Skills Grid */
+    .skills-container {
+      display: grid !important;
+      gap: 2rem !important;
+      grid-template-columns: 1fr !important;
+    }
+    
+    @media (min-width: 768px) {
+      .skills-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .skills-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    
+    /* Responsive Contact Layout */
+    .contact-content {
+      display: grid !important;
+      gap: 3rem !important;
+      grid-template-columns: 1fr !important;
+    }
+    
+    @media (min-width: 1024px) {
+      .contact-content {
+        grid-template-columns: 1fr 1.5fr !important;
+      }
+    }
+    
+    /* Touch-Friendly Elements */
+    button, .btn, a {
+      min-height: 44px !important;
+      min-width: 44px !important;
+    }
+    
+    /* Responsive Images */
+    img {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+    
+    /* Safe Areas for Notched Devices */
+    .site-header {
+      padding-left: max(1rem, env(safe-area-inset-left)) !important;
+      padding-right: max(1rem, env(safe-area-inset-right)) !important;
+    }
+    
+    .container {
+      padding-left: max(1rem, env(safe-area-inset-left)) !important;
+      padding-right: max(1rem, env(safe-area-inset-right)) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Custom Cursor System (Desktop Only) -->
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo">R CODES<span class="text-accent">.</span></div>
+    <div class="loading-progress">
+      <div class="loading-bar"></div>
+    </div>
+    <div class="loading-text">CODE SLEEP REPEAT</div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" tabindex="0">
+    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="5"></circle>
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+    </svg>
+    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="#home" id="brandLink" aria-label="R CODES - Go to homepage">
+        R CODES<span class="brand-dot">.</span>
+      </a>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+        <div class="magic-line" id="magicLine" aria-hidden="true"></div>
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#experience" class="nav-link" data-section="experience">Journey</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="region" aria-label="Introduction">
+      <!-- Floating Elements -->
+      <div class="floating-elements" aria-hidden="true">
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+        <div class="floating-shape"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-greeting reveal-on-scroll">
+            <span class="emoji" role="img" aria-label="waving hand">👋</span>
+            <span>Hello World, I'm</span>
+          </div>
+          
+          <h1 class="hero-title reveal-on-scroll">
+            <span class="typing-text" id="typingText" aria-live="polite">RISHABH KUMAR</span>
+            <span class="typing-cursor" id="typingCursor" aria-hidden="true"></span>
+            <br>
+            <span class="highlight">Building</span> the Future
+          </h1>
+          
+          <div class="hero-subtitle reveal-on-scroll">
+            <span class="role-highlight">MCA GenAI Student</span>
+            <span class="separator" aria-hidden="true">•</span>
+            <span class="role-highlight">AI & Full-Stack Developer</span>
+            <span class="separator" aria-hidden="true">•</span>
+            <span class="role-highlight">Problem Solver</span>
+          </div>
+          
+          <p class="hero-description reveal-on-scroll">
+            Crafting <strong>intelligent solutions</strong> as an MCA GenAI student at SRM KTR. Mastering <strong>C++ DSA</strong>, <strong>MERN stack</strong>, and <strong>Python AI/ML</strong> while working towards <strong>GSoC 2026</strong> and impactful full-stack development.
+          </p>
+          
+          <div class="hero-cta reveal-on-scroll">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+              </svg>
+            </a>
+            <a href="assets/documents/resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <span>Download Resume</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="hero-stats reveal-on-scroll" role="region" aria-label="Statistics">
+            <div class="stat-item">
+              <span class="stat-number" data-count="15" aria-live="polite">0</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="200" aria-live="polite">0</span>
+              <span class="stat-label">Problems Solved</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="2" aria-live="polite">0</span>
+              <span class="stat-label">Years Learning</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-count="95" aria-live="polite">0</span>
+              <span class="stat-label">Dedication Level</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-on-scroll slide-left">
+          <div class="hero-card" id="heroCard">
+            <div class="card-bg-pattern" aria-hidden="true"></div>
+            
+            <div class="avatar-container">
+              <img src="RISHU.png" alt="Rishabh Kumar - MCA GenAI Student & AI Developer" class="avatar" loading="eager" width="200" height="200">
+              <div class="avatar-ring" aria-hidden="true"></div>
+            </div>
+            
+            <div class="hero-card-content">
+              <h2 class="hero-card-title">Rishabh Kumar</h2>
+              <p class="hero-card-role">MCA GenAI Student</p>
+              <div class="hero-card-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Chennai, India</span>
+              </div>
+              
+              <div class="social-preview" role="list" aria-label="Social media links">
+                <a href="https://github.com/rishabh1721" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/rishabh-kumar-0b3249339" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+                <a href="https://leetcode.com/u/rishabh_kr_17/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LeetCode Profile">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.794 2.133 7.926-.072 2.165-2.245 2.133-5.791-.074-7.926l-4.833-4.751c-.407-.398-1.046-.379-1.429.043-.382.423-.364 1.06.043 1.458l4.833 4.751c1.18 1.132 1.202 2.928.048 4.082-1.157 1.155-2.877 1.134-4.006-.048l-4.552-4.463-.024-.024c-.462-.453-.62-1.017-.462-1.555.158-.538.62-.854 1.204-.854l1.701-.013.024-.024 4.833-4.751c.407-.398.425-1.035.043-1.458-.382-.423-1.022-.442-1.429-.043l-4.833 4.751-.024.024-1.701.013-.024.024c-.697 0-1.296.16-1.737.47-.441.31-.697.728-.697 1.204 0 .476.256.894.697 1.204.44.31 1.04.47 1.737.47l1.701-.013.024-.024 4.833-4.751c.407-.398 1.046-.379 1.429.043.382.423.364 1.06-.043 1.458l-4.833 4.751-.024.024-1.701.013c-.697 0-1.296-.16-1.737-.47-.441-.31-.697-.728-.697-1.204 0-.476.256-.894.697-1.204.44-.31 1.04-.47 1.737-.47l1.701.013.024.024c.407-.398 1.046-.379 1.429.043.382.423.364 1.06-.043 1.458z"/>
+                  </svg>
+                </a>
+                <a href="mailto:rishabhkmr008@gmail.com" class="social-link" aria-label="Email Contact">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <div class="status-badge">
+              <div class="status-dot" aria-hidden="true"></div>
+              <span>Available for Opportunities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator" id="scrollIndicator" role="button" tabindex="0" aria-label="Scroll to explore more content">
+        <div class="scroll-mouse" aria-hidden="true">
+          <div class="scroll-wheel"></div>
+        </div>
+        <span>Scroll to Explore</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section" role="region" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-number" aria-hidden="true">01. About</div>
+          <h2 id="about-heading" class="section-title">Crafting Digital Excellence</h2>
+          <p class="section-subtitle">
+            Passionate about creating intelligent solutions that bridge the gap between cutting-edge technology and human-centered design.
+          </p>
+        </div>
+
+        <div class="about-content">
+          <div class="about-grid reveal-on-scroll">
+            <div class="about-text">
+              <p>I'm a dedicated <strong>MCA GenAI student</strong> at SRM KTR with a passion for building intelligent web applications and solving complex problems. My journey spans across <strong>C++ Data Structures & Algorithms</strong>, <strong>MERN stack development</strong>, and cutting-edge <strong>AI/ML technologies</strong>.</p>
+              
+              <p>Currently based in <strong>Chennai</strong>, I'm actively working on competitive programming challenges and building full-stack projects. While I'm still growing my skills on platforms like <strong>LeetCode</strong>, I'm committed to continuous learning and improvement in the field of technology.</p>
+              
+              <p>My goal is to contribute to <strong>Google Summer of Code 2026</strong> and secure impactful internships that allow me to apply my growing expertise in AI and full-stack development to solve real-world problems.</p>
+            </div>
+            
+            <div class="about-skills">
+              <h3>Technologies I Love</h3>
+              <div class="skill-tags" role="list" aria-label="Technology skills">
+                <span class="skill-tag" role="listitem">C++ & DSA</span>
+                <span class="skill-tag" role="listitem">React & Node.js</span>
+                <span class="skill-tag" role="listitem">Python & AI/ML</span>
+                <span class="skill-tag" role="listitem">MongoDB & Express</span>
+                <span class="skill-tag" role="listitem">Machine Learning</span>
+                <span class="skill-tag" role="listitem">Data Structures</span>
+                <span class="skill-tag" role="listitem">Full-Stack Development</span>
+                <span class="skill-tag" role="listitem">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section" role="region" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-number" aria-hidden="true">02. Projects</div>
+          <h2 id="projects-heading" class="section-title">Featured Work</h2>
+          <p class="section-subtitle">
+            A showcase of innovative projects that demonstrate my expertise in AI, full-stack development, and creative problem-solving.
+          </p>
+        </div>
+
+        <div class="projects-filter reveal-on-scroll" role="tablist" aria-label="Project filters">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" aria-controls="projectsGrid">All Projects</button>
+          <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false" aria-controls="projectsGrid">Full-Stack</button>
+          <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false" aria-controls="projectsGrid">AI/ML</button>
+          <button class="filter-btn" data-filter="frontend" role="tab" aria-selected="false" aria-controls="projectsGrid">Frontend</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid" role="tabpanel" aria-live="polite" aria-label="Project showcase">
+          <div class="project-loading" role="status" aria-label="Loading projects">
+            <div class="loading-spinner" aria-hidden="true"></div>
+            <p>Loading amazing projects...</p>
+          </div>
+        </div>
+
+        <div class="projects-cta reveal-on-scroll">
+          <p>Want to see more? Check out my complete portfolio on GitHub.</p>
+          <a href="https://github.com/rishabh1721" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <span>View All Projects</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3L21 3 21 9M10 14L21 3"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section" role="region" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-number" aria-hidden="true">03. Skills</div>
+          <h2 id="skills-heading" class="section-title">Technical Expertise</h2>
+          <p class="section-subtitle">
+            A comprehensive overview of the technologies and tools I use to bring ideas to life.
+          </p>
+        </div>
+
+        <div class="skills-container" id="skillsContainer" role="region" aria-label="Skills and expertise">
+          <!-- Skills will be loaded dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section" role="region" aria-labelledby="experience-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-number" aria-hidden="true">04. Journey</div>
+          <h2 id="experience-heading" class="section-title">Learning Path</h2>
+          <p class="section-subtitle">
+            My journey through the world of technology, learning, and innovation.
+          </p>
+        </div>
+
+        <div class="experience-timeline" id="experienceTimeline" role="region" aria-label="Professional experience timeline">
+          <!-- Experience items will be loaded dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section" role="region" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <div class="section-number" aria-hidden="true">05. Contact</div>
+          <h2 id="contact-heading" class="section-title">Let's Create Something Amazing</h2>
+          <p class="section-subtitle">
+            Ready to turn your ideas into reality? Let's connect and build the future together.
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info reveal-on-scroll">
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p id="emailText">rishabhkmr008@gmail.com</p>
+                <button id="copyEmailBtn" class="copy-btn" aria-label="Copy email address to clipboard">Copy Email</button>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h3>Location</h3>
+                <p>Chennai, Tamil Nadu, India</p>
+                <small>Open to remote opportunities worldwide</small>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12,6 12,12 16,14"></polyline>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <h3>Response Time</h3>
+                <p>Within 24 hours</p>
+                <small>Usually much faster!</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container reveal-on-scroll">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input id="name" name="name" type="text" required autocomplete="name" placeholder="Your full name" aria-describedby="name-error">
+                  <span id="name-error" class="field-error" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input id="email" name="email" type="email" required autocomplete="email" placeholder="your@email.com" aria-describedby="email-error">
+                  <span id="email-error" class="field-error" aria-live="polite"></span>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" required placeholder="What's this about?" aria-describedby="subject-error">
+                <span id="subject-error" class="field-error" aria-live="polite"></span>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or idea..." aria-describedby="message-error"></textarea>
+                <span id="message-error" class="field-error" aria-live="polite"></span>
+              </div>
+              
+              <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading" aria-hidden="true">
+                  <div class="loading-spinner"></div>
+                  Sending...
+                </span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>R CODES</h3>
+          <p>Crafting the future, one line of code at a time.</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Navigation</h4>
+            <nav role="navigation" aria-label="Footer navigation">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#projects">Projects</a>
+              <a href="#skills">Skills</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+          
+          <div class="link-group">
+            <h4>Connect</h4>
+            <nav role="navigation" aria-label="Social media links">
+              <a href="https://github.com/rishabh1721" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/rishabh-kumar-0b3249339" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://leetcode.com/u/rishabh_kr_17/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+              <a href="mailto:rishabhkmr008@gmail.com">Email</a>
+            </nav>
+          </div>
+          
+          <div class="link-group">
+            <h4>Resources</h4>
+            <nav role="navigation" aria-label="Resource links">
+              <a href="assets/documents/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+              <a href="#projects">Portfolio</a>
+              <a href="https://leetcode.com/u/rishabh_kr_17/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+              <a href="https://github.com/rishabh1721" target="_blank" rel="noopener noreferrer">GitHub Projects</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2025</span> Rishabh Kumar. Designed & Built with ❤️ and lots of ☕</p>
+        <div class="footer-tech">
+          <span>Powered by Innovation • Built with HTML, CSS & JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top" tabindex="0">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- Notification Container -->
+  <div id="notificationContainer" class="notification-container" aria-live="polite" role="region" aria-label="Notifications"></div>
+
+  <!-- Screen Reader Only Content -->
+  <div class="sr-only" aria-live="polite" aria-atomic="true" id="sr-status"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  
+  <!-- Additional Responsive JavaScript -->
+  <script>
+    // Ensure responsive behavior
+    window.addEventListener('load', () => {
+      // Update viewport height for mobile browsers
+      const setVH = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      };
+      
+      setVH();
+      window.addEventListener('resize', setVH);
+      window.addEventListener('orientationchange', () => {
+        setTimeout(setVH, 100);
+      });
+      
+      // Touch device detection
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      if (isTouchDevice) {
+        document.documentElement.classList.add('touch-device');
+      }
+      
+      // Reduce animations on low-end devices
+      if (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2) {
+        document.documentElement.classList.add('low-power-device');
+      }
+    });
+  </script>
+</body>
+</html>
